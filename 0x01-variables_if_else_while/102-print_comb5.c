@@ -6,28 +6,21 @@
  */
 int main(void)
 {
-	int x, y, z, a;
+	int x, y;
 
-	for (x = 0; x < 10; x++)
+	for (x = 0; x <= 98; x++)
 	{
-		for (y = 0; y < 10; y++)
+		for (y = x + 1; y <= 99; y++)
 		{
-			for (z = x; z < 10; z++)
-			{
-				for (a = y + 1; a < 10; a++)
-				{
-					putchar((x % 10) + '0');
-					putchar((y % 10) + '0');
-					putchar(' ');
-					putchar((z % 10) + '0');
-					putchar((a % 10) + '0');
-					if
-						((x == 9) && (y == 8) && (z == 9) && (a == 9))
-						continue;
-					putchar(',');
-					putchar(' ');
-				}
-			}
+			putchar((x / 10) + '0');
+			putchar((x % 10) + '0');
+			putchar(' ');
+			putchar((y / 10) + '0');
+			putchar((y % 10) + '0');
+			if (x == 98 && y == 99)
+				continue;
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
