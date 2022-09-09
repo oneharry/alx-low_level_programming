@@ -11,3 +11,4 @@ Working with C varibales and conditional operators
 9-print_comb.c: program that prints all possible combinations of single-digit numbers
 100-print_comb3.c:  program that prints all possible different combinations of two digits
 101-print_comb4.c: a program that prints all possible different combinations of three digits
+102-print_comb5.c:  a program that prints all possible combinations of two two-digit numbers
