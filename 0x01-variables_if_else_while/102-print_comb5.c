@@ -22,7 +22,8 @@ int main(void)
 					putchar((z % 10) + '0');
 					putchar((a % 10) + '0');
 					if
-						(x == 9 && y == 8 && z == 9 && a == 9);
+						((x == 9) && (y == 8) && (z == 9) && (a == 9))
+						continue;
 					putchar(',');
 					putchar(' ');
 				}
