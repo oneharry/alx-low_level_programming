@@ -15,12 +15,14 @@ int main(void)
 			for (z = x; z < 10; z++)
 			{
 				for (a = y + 1; a < 10; a++)
-				{ 
+				{
 					putchar((x % 10) + '0');
 					putchar((y % 10) + '0');
 					putchar(' ');
 					putchar((z % 10) + '0');
 					putchar((a % 10) + '0');
+					if
+						(x == 9 && y == 8 && z == 9 && a == 9);
 					putchar(',');
 					putchar(' ');
 				}
