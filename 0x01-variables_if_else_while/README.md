@@ -5,3 +5,4 @@ Working with C varibales and conditional operators
 3-print_alphabets.c:  a program that prints the alphabet in lowercase, and then in uppercase, followed by a new line
 4-print_alphabt.c: a program that prints the alphabet in lowercase, followed by a new line
 5-print_numbers.c: a C program that prints all single digit numbers of base 10 starting from 0, followed by a new line
+6-print_numberz.c: a C program that prints all single digit numbers of base 10 starting from 0, followed by a new line
