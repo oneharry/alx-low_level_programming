@@ -1,22 +1,13 @@
-
 #include <stdio.h>
+#include <main.h>
 /**
- * main - Entry point
- * Return: Always 0 (Success)
+ * _islower - Checks for lowercase characters
+ * @c: the character to be checked
+ * Return: Retruns 1 if its a lowercase char, and 0 if otherwise
  */
 int _islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (1);
-	return (0);
-		
-}
-int main(void)
-{
-	int num = 0;
-	
-	printf("Enter: ");
-	scanf("%d", &num);
-	printf("%d", _islower(num));
 	return (0);
 }

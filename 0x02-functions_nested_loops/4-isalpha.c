@@ -1,27 +1,14 @@
-
 #include <stdio.h>
+#include <main.h>
 /**
- * main - Entry point
- * Return: Always 0 (Success)
+ * _isalpha - Checks if an input is an alphabet
+ * @c: The argument to be checked
+ * Return: Returns 1 if its an alphabet; 0 if otherwise
  */
-int _isalpha(int c);
-int main(void)
-{
-	int num = 0;
-	
-	printf("Enter: ");
-	scanf("%d", &num);
-	printf("%d", _isalpha(num));
-	return (0);
-}
 int _isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-	{
 		return (1);
-	} else
-	{
-		return (0);
-	}
+	return (0);
 }
 

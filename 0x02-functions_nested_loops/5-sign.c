@@ -1,19 +1,10 @@
-
 #include <stdio.h>
+#include <main.h>
 /**
- * main - Entry point
- * Return: Always 0 (Success)
+ * print_sign - Prints a sign depending on the sign of an integer
+ * @n: An integer n to be checked
+ * Return: Returns +, - or 0 depending on the number entered.
  */
-int print_sign(int n);
-int main(void)
-{
-	int num = 0;
-	
-	printf("Enter: ");
-	scanf("%d", &num);
-	printf("%d", print_sign(num));
-	return (0);
-}
 int print_sign(int n)
 {
 	if (n > 0)
@@ -24,11 +15,9 @@ int print_sign(int n)
 	{
 		putchar('-');
 		return (-1);
-	} else if (n = 0)
+	} else if (n == 0)
 	{
 		putchar('0');
 		return (0);
 	}
-		
 }
-
