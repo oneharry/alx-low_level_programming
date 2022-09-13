@@ -6,7 +6,8 @@
  */
 void jack_bauer(void)
 {
-	int first = last = 00;
+	int first = 00;
+	int last = 00;
 
 	for (first = 00; first <= 23; first++)
 	{
