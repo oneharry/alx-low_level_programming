@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 /**
  * _isalpha - Checks if an input is an alphabet
  * @c: The argument to be checked

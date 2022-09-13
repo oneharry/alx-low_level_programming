@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 /**
  * print_sign - Prints a sign depending on the sign of an integer
  * @n: An integer n to be checked

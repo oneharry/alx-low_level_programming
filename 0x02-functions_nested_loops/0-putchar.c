@@ -6,14 +6,14 @@
  */
 int main(void)
 {
-	char msg[] = "_putchar";
-	char *str = msg;
-
-	while (*str != '\0')
-	{
-		putchar(*str);
-		*str++;
-	}
+	putchar('_');
+	putchar('p');
+	putchar('u');
+	putchar('t');
+	putchar('c');
+	putchar('h');
+	putchar('a');
+	putchar('r');
 	putchar('\n');
 	return (0);
 }
