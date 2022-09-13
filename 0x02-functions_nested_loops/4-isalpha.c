@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+/**
+ * main - Entry point
+ * Return: Always 0 (Success)
+ */
+int _isalpha(int c);
+int main(void)
+{
+	int num = 0;
+	
+	printf("Enter: ");
+	scanf("%d", &num);
+	printf("%d", _isalpha(num));
+	return (0);
+}
+int _isalpha(int c)
+{
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+		return (1);
+	} else
+	{
+		return (0);
+	}
+}
+

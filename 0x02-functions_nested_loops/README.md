@@ -3,3 +3,5 @@ Programs for functions and nested loop
 1-alphabet.c: Prints alphabet followed by a new line
 2-print_alphabet_x10.c: printing alphabet 10 times
 3-islower.c: checks for lowercase character
+4-isalpha.c: check for alphabet
+5-sign.c: function that prints the sign of a number
