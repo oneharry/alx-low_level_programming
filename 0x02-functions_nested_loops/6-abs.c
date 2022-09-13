@@ -2,10 +2,10 @@
 #include "main.h"
 /**
  * _abs - Computes the absolute value of an integer argument
- * @int: The integer argument to be computed
+ * @n: The integer argument to be computed
 * Return: Always the computed value of the int
  */
-int _abs(int)
+int _abs(int n)
 {
 	if (n > 0)
 	{
@@ -17,5 +17,5 @@ int _abs(int)
 	{
 		return (0);
 	}
+	return (0);
 }
-
