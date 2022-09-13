@@ -9,3 +9,4 @@ Programs for functions and nested loop
 7-print_last_digit.c: This function prints the last digit of a number
 7-print_last_digit.c: This function prints the last digit of a number
 8-24_hours.c: Print thenumber countdown
+9-times_table.c: Print a times table
