@@ -19,7 +19,4 @@ void print_to_98(int x)
 	{
 		printf("%d", x);
 	}
-
-	return (sum);
 }
-
