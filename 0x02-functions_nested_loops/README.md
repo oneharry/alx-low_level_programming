@@ -2,3 +2,4 @@ Programs for functions and nested loop
 0-putchar.c: that prints _putchar, followed by a new line
 1-alphabet.c: Prints alphabet followed by a new line
 2-print_alphabet_x10.c: printing alphabet 10 times
+3-islower.c: checks for lowercase character
