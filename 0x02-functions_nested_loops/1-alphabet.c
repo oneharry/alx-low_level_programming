@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - Entry point
- * Return: Always 0 (Success)
+ * print_alphabet -prints aall letters of the alphabet
+ * Return: No return value, since function is of type void
  */
 void print_alphabet(void)
 {
