@@ -9,7 +9,7 @@ void jack_bauer(void)
 	int first = 0;
 	int last = 0;
 
-	for (first = 0; first <= 23; first++)
+	while (first <= 23)
 	{
 		while (last <= 59)
 		{
@@ -18,8 +18,10 @@ void jack_bauer(void)
 			_putchar(':');
 			_putchar((last / 10) + '0');
 			_putchar((last % 10) + '0');
+			_putchar('\n');
 			last++;
 		}
+		first++;
 	}
 }
 
