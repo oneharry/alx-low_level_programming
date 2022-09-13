@@ -16,11 +16,11 @@ void times_table(void)
 			if (num >= 10)
 			{
 				putchar((num / 10) + '0');
-				putchar((num % 10) + '0');
 			} else
 			{
-				_putchar(num + '0');
+				_putcha(' ');
 			}
+			_putchar(num + '0');
 			_putchar(',');
 			_putchar(' ');
 		}
