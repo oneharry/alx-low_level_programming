@@ -11,3 +11,4 @@ Programs for functions and nested loop
 8-24_hours.c: Print thenumber countdown
 9-times_table.c: Print a times table
 10-add.c: return the su, of 2 integers
+11-print_to_98.c: print all natural numbers
