@@ -5,7 +5,7 @@
  * @x: the integer of starting point to print
 * Return: void
  */
-int print_to_98(int x)
+void print_to_98(int x)
 {
 	if (x > 98)
 	{
