@@ -12,3 +12,4 @@ Programs for functions and nested loop
 9-times_table.c: Print a times table
 10-add.c: return the su, of 2 integers
 11-print_to_98.c: print all natural numbers
+100-times_table.c: print n times of table
