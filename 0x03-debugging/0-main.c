@@ -3,7 +3,7 @@
  * main - Entry function, prints integer
  * Return: returns 0 (success)
  */
-int mian(void)
+int main(void)
 {
 	int i;
 
