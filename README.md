@@ -1,1 +1,1 @@
-Writing C programming language and scripts to run them, across different projects projects
+Learning and coding in C programming language. This is done through tasks and projects
