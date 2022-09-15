@@ -11,7 +11,7 @@ int main(void)
 	long x = 612852475143;
 	long y;
 
-	while (y < (prime / 2))
+	while (y < (x / 2))
 	{
 		if ((x % 2) == 0)
 		{
