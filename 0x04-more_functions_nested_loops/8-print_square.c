@@ -6,16 +6,18 @@
  * Return: void
  */
 
-void print_square(int n)
+void print_square(int size)
 {
 	int x, y;
 
-	if (n > 0)
+	if (size > 0)
 	{
 		for (x = 0; x <= size; x++)
 		{
 			for (y = 0; y <= size; y++)
 				_putchar('#');
+			if (x == size - 1)
+				continue;
 			_putchar('\n');
 		}
 	}
