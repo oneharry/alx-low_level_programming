@@ -13,7 +13,7 @@ int _atoi(char *s)
 
 	while (*s++)
 	{
-		if (*s < 0)
+		if (*s == '-')
 			y = x * -1;
 		else if (*s >= '0' && *s <= '9')
 			y = (y * 10) + (*s - '0');
