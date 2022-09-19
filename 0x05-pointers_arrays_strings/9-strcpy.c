@@ -7,12 +7,11 @@
  * Return: void
  */
 
-char *_strcpy(char *dest, char *src)
+char *_strcpy(char *dest, const char *src)
 {
-	const char *s;
 	int x;
 
-	s = src;
+	
 	for (x = 0; src[x]; x++)
 	{
 		if (src[x] == '\0')
