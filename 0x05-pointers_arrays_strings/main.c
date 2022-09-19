@@ -11,16 +11,14 @@ int main(void)
 	char *str;
 	str = "0123456789";
 	
-	puts2(str);
+	puts_half(str);
 	return (0);
 }
-void puts2(char *s)
+void puts_half(char *s)
 {
-	char hold;
-	int len = (_strlen(s) - 1);
-	int i = 0;
-
-	for (i = 0; i < len; i += 2)
+	int len = _strlen(s);
+	int i;
+	for (i = len - 1; i >= len / 2; i--)
 	{
 		putchar('H');
 		putchar(s[i]);
