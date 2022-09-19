@@ -20,7 +20,7 @@ void puts2(char *s)
 	int len = (_strlen(s) - 1);
 	int i = 0;
 
-	for (i = 0; i < len; i + 2)
+	for (i = 0; i < len; i += 2)
 	{
 		putchar('H');
 		putchar(s[i]);
