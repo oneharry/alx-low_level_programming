@@ -10,9 +10,9 @@
 char *_strcpy(char *dest, char *src)
 {
 	const char *s;
-	s = src;
 	int x;
 
+	s = src;
 	for (x = 0; src[x]; x++)
 	{
 		if (src[x] == '\0')
