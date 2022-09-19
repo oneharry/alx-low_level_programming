@@ -1,0 +1,8 @@
+#include <stdio.h>
+/**
+ * main - Entry point function generates random valid psswd
+ */
+int main(void)
+{
+	return (0);
+}
