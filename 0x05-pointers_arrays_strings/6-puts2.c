@@ -15,6 +15,7 @@ void puts2(char *s)
 	{
 		_putchar(s[x]);
 	}
+	_putchar('\n');
 }
 /**
  * _strlen - returns length os string
