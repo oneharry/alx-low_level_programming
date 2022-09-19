@@ -9,8 +9,10 @@
 
 void print_array(int *a, int n)
 {
-	int len = _strlen(a);
+	int len = 0;
 
+	while (a[len])
+		len++;
 	if (len >= n)
 	{
 		int x;
@@ -21,17 +23,4 @@ void print_array(int *a, int n)
 		}
 		_putchar('\n');
 	}
-}
-/**
- * _strlen - returns length os string
- * @s: string argument
- * Return: length of string
- */
-int _strlen(int *s)
-{
-	int counter = 0;
-
-	while (s[counter] != 0)
-		counter++;
-	return (counter);
 }
