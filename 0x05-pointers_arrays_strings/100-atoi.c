@@ -10,7 +10,7 @@ int _atoi(char *s)
 {
 	int x, num;
 
-	for (x = 0; src[x]; x++)
-		num *= src[x] - '0';
+	for (x = 0; s[x]; x++)
+		num *= s[x] - '0';
 	return (num);
 }
