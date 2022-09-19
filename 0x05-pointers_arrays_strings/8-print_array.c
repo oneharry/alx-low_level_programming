@@ -27,7 +27,7 @@ void print_array(int *a, int n)
  * @s: string argument
  * Return: length of string
  */
-int _strlen(char *s)
+int _strlen(int *s)
 {
 	int counter = 0;
 
