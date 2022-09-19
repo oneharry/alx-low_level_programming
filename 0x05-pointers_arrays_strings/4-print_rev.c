@@ -3,6 +3,7 @@
 /**
  * print_rev - Prints the string passed in reverse form
  * @s:string argument
+ * _strlen - returns the length of the string
  * Return: void
  */
 
