@@ -7,15 +7,14 @@
  * Return: void
  */
 
-char *_strcpy(char *dest, const char *src)
+char *_strcpy(char *dest, char *src)
 {
 	int x;
 
-	
 	for (x = 0; src[x]; x++)
 	{
 		if (src[x] == '\0')
-			dest[x] = s[x];
+			break;
 		dest[x] = src[x];
 	}
 	return (dest);
