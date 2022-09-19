@@ -1,20 +1,31 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_rev - Prints the string passed in reverse form
+ * rev_string - Prints the string passed in reverse form
  * @s:string argument
  * Return: void
  */
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
-	int len = _strlen(s);
-	int x;
+	char hold;
+	int len = _strlen(char s) - 1;
+	int x = 0;
 
-	for (x = len - 1; x >=0; x--)
-		_putchar(s[x]);
+	for (x = 0; x < len ; x++)
+	{
+		hold = s[x];
+		s[x] = s[len];
+		s[len] = hold;
+		len++;
+	}
 	_putchar('\n');
 }
+/**
+ * _strlen - returns length os string
+ * @s: string argument
+ * Return: length of string
+ */
 int _strlen(char *s)
 {
 	int counter = 0;

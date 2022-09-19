@@ -8,24 +8,31 @@
 
 int main(void)
 {
-	char *str;
+	char s[10] = "My school";
 
-	str = "I do not fear computer. I fear the lack of them - Isaac Asim";
-	print_rev(str);
+	printf("%s\n", s);
+	rev_string(s);
+	printf("%s\n", s);
 	return (0);
 }
-void print_rev(char *s)
+void rev_string(char *s)
 {
-	int len = _strlen(s);
-	int i;
+	char hold;
+	int len = (_strlen(s) - 1);
+	int i = 0;
 
-	for (i = len - 1; i >= 0; i - 1)
+	while (i < len)
 	{
-		putchar(s[i]);
+		hold = s[i];
+		s[i] = s[len];
+		s[len] = hold;
+		len--;
+		i++;
+	      len);
 	}
 	putchar('\n');
 }
-int _strlen(char *s)
+int _strlen(char s[])
 {
 	int x = 0;
 	while (s[x] != 0)
