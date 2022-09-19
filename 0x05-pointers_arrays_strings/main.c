@@ -8,30 +8,28 @@
 
 int main(void)
 {
-
 	char *str;
 
-	str = "My first strlen!";
+	str = "I do not fear computer. I fear the lack of them - Isaac Asim";
 	print_rev(str);
-	//printf("n=%d\n", len);
 	return (0);
 }
 void print_rev(char *s)
 {
-	int len = le(s);
+	int len = _strlen(s);
 	int i;
-	for (i = len - 1; i >= 0; i--)
+
+	for (i = len - 1; i >= 0; i - 1)
 	{
-//		putchar(s[i]);
+		putchar(s[i]);
 	}
 	putchar('\n');
 }
-int le(char *s)
+int _strlen(char *s)
 {
-	int i = 0;
-	while (*s != '\0')
+	int x = 0;
+	while (s[x] != 0)
 	{
-		i++;
-		*s++;
+		x++;
 	}
 }
