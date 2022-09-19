@@ -17,9 +17,7 @@ void rev_string(char *s)
 		hold = s[x];
 		s[x] = s[len - x - 1];
 		s[len - x - 1] = hold;
-		len++;
 	}
-	_putchar('\n');
 }
 /**
  * _strlen - returns length os string
