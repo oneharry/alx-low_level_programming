@@ -13,7 +13,7 @@ int main(void)
 	char alphaLow[] = "abcdefghijklmnopqrstuvwxyz";
 	char symbols[] = "@#$%&*^?";
 	char integers[] = "1234567890";
-	char password[70];
+	char password[84];
 
 	printf("Hello here\n");
 	srand(time(NULL));
