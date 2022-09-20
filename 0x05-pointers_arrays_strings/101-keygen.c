@@ -13,13 +13,13 @@ int main(void)
 	char alphaLow[] = "abcdefghijklmnopqrstuvwxyz";
 	char symbols[] = "@#$%&*^?";
 	char integers[] = "1234567890";
-	char password[84];
+	char password[70];
 
 	printf("Hello here\n");
 	srand(time(NULL));
 
 	random_num = rand() % 4;
-	for (x = 0; x < 84; x++)
+	for (x = 0; x < 70; x++)
 	{
 		if ((random_num == 1))
 		{
