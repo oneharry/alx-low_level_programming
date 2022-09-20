@@ -7,19 +7,19 @@
  */
 int main(void)
 {
-	int x;
+	int x, i;
 	int random_num = 0;
 	char alphaUpper[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char alphaLow[] = "abcdefghijklmnopqrstuvwxyz";
 	char symbols[] = "@#$%&*^?";
 	char integers[] = "1234567890";
-	char password[50];
+	char password[i];
 
 	printf("Hello here\n");
 	srand(time(NULL));
 
 	random_num = rand() % 4;
-	for (x = 0; x < 50; x++)
+	for (x = 0; x < i; x++)
 	{
 		if ((random_num == 1))
 		{
