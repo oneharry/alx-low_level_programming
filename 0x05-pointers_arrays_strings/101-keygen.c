@@ -21,7 +21,7 @@ int main(void)
 	random_num = rand() % 4;
 	for (x = 0; x < 50; x++)
 	{
-		if ((random == 1))
+		if ((random_num == 1))
 		{
 			password[x] = integers[rand() % 10];
 			random_num = (rand() % 4);
