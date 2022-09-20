@@ -19,7 +19,7 @@ int main(void)
 	srand(time(NULL));
 
 	random_num = rand() % 4;
-	for (x = 0; x < 70; x++)
+	for (x = 0; x < 84; x++)
 	{
 		if ((random_num == 1))
 		{
