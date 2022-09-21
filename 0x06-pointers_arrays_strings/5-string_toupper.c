@@ -10,7 +10,7 @@ char *string_toupper(char *c)
 
 	for (x = 0; c[x]; x++)
 	{
-		if (c >= 'a' && c <= 'z')
+		if (c[x] >= 'a' && c[x] <= 'z')
 			c[x] -= 32;
 	}
 	return (c);
