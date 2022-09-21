@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * _strcpy - Concatenate two strings
+ * _strncpy - Concatenate two strings
  * @dest: first argument string to be concatenated
  * @src: second argument string to be added to dest
  * @n: number of char from src to be appended to the first arg
