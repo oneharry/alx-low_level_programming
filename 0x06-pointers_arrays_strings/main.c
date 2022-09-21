@@ -8,13 +8,10 @@
 int main(void)
 {
 	char *ptr;
-	char s2[] = "Expect the best. Prepare for the worst. Capitalize on"
-		"what comes. \nhello wolrd! hello-world 0123456hello"
-		"world\thello world.hello world\n";
-
-	ptr = cap_string(s2);
+	char s2[] = "Expect the best. Prepare for the worst. Capitalize on";
+	ptr = leet(s2);
 	printf("%s", ptr);
-	printf("%s", ptr);
+	printf("%s", s2);
 	return (0);
 
 }

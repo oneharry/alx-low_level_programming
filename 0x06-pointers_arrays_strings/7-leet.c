@@ -7,17 +7,17 @@
 char *leet(char *str)
 {
 	int x = 0;
-	int y;
-	char letters[8] = {'o', 'l', '*', 'e', 'a', '(', '{', '7'};
+	int y = 0;
+	char letters[8] = {'O', 'L', '*', 'E', 'A', '(', '{', 'T'};
 
 	while (str[x])
 	{
-		while (y <= 7)
+		for (y = 0; y <= 7; y++)
 		{
-			if (str[x] == letters[y] ||
-			    str[x] + 32 == letters[y])
+			if ((str[x] == letters[y]) ||
+			    (str[x] - 32 == letters[y]))
 				str[x] = y + '0';
-			y++
+		      
 		}
 		x++;
 	}
