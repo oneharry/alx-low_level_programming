@@ -17,7 +17,7 @@ char *leet(char *str)
 			if ((str[x] == letters[y]) ||
 			    (str[x] - 32 == letters[y]))
 				str[x] = y + '0';
-		      
+
 		}
 		x++;
 	}

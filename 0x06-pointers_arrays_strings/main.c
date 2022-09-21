@@ -8,7 +8,8 @@
 int main(void)
 {
 	char *ptr;
-	char s2[] = "Expect the best. Prepare for the worst. Capitalize on";
+	char s2[] = "Expect the best. Prepare for the worst. Capitalize on"
+		"what comes.\n";
 	ptr = leet(s2);
 	printf("%s", ptr);
 	printf("%s", s2);
