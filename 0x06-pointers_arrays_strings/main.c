@@ -8,7 +8,9 @@
 int main(void)
 {
 	char *ptr;
-	char s2[] = "First, solve the problem. Then, write the code\n";
+	char s2[] = "Expect the best. Prepare for the worst. Capitalize on"
+		"what comes. \nhello wolrd! hello-world 0123456hello"
+		"world\thello world.hello world\n";
 
 	ptr = cap_string(s2);
 	printf("%s", ptr);

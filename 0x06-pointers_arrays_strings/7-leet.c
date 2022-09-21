@@ -12,7 +12,7 @@ char *leet(char *str)
 
 	while (str[x])
 	{
-		while (y < 7)
+		while (y <= 7)
 		{
 			if (str[x] == letters[y] ||
 			    str[x] + 32 == letters[y])
