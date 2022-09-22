@@ -10,13 +10,13 @@ char *rot13(char *str)
 
 	for (x = 0; str[x]; x++)
 	{
-		if (str[x] >= 'a' && str[x] <= 'm')
-			str[x] += 13;
-		else if (str[x] >= 'n' && str[x] <= 'z')
-			str[x] -= 13;
 		if (str[x] >= 'A' && str[x] <= 'M')
 			str[x] += 13;
 		else if (str[x] >= 'N' && str[x] <= 'Z')
+			str[x] -= 13;
+		else if (str[x] >= 'a' && str[x] <= 'm')
+			str[x] += 13;
+		else if (str[x] >= 'n' && str[x] <= 'z')
 			str[x] -= 13;
 	}
 	return (str);
