@@ -7,12 +7,12 @@
  */
 int main(void)
 {
-	char *ptr;
-	char s2[] = "Expect the best. Prepare for the worst. Capitalize on"
-		"what comes.\n";
-	ptr = leet(s2);
-	printf("%s", ptr);
-	printf("%s", s2);
+	char s2[] = "World!";
+	char s1[] = "Hello";
+
+	printf("%d", _strcmp(s1, s2));
+	printf("%d", _strcmp(s2, s1));
+	printf("%d\n", _strcmp(s1, s1));
 	return (0);
 
 }
