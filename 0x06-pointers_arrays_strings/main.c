@@ -7,12 +7,12 @@
  */
 int main(void)
 {
-	char s2[] = "World!";
-	char s1[] = "Hello";
-
-	printf("%d\n", _strcmp(s1, s2));
-	printf("%d\n", _strcmp(s2, s1));
-	printf("%d\n", _strcmp(s1, s1));
+	char s2[] = "ROt13 (\"rotate by 13 places\", sometimes hyphenated";
+	char *p = rot13(s2);
+	printf("%s\n", p);
+	printf("%s\n", s2);
+	p = rot13(s2);
+	printf("%s\n", s2);
 	return (0);
 
 }
