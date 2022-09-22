@@ -7,12 +7,13 @@
  */
 void reverse_array(char *a, int n)
 {
-	int x, hold;
+	int x = 0;
+	int hold;
 
-	for (x = n - 1; x >= n / 2; x--)
+	for (x = 0; x < n - 3; x++)
 	{
-		hold = a[n - 1 - x];
-		a[n - 1 - x] = a[x];
-		a[x] = hold;
+		hold = a[x];
+		a[x] = a[n - x - 1];
+		a[n - x - 1] = hold;
 	}
 }
