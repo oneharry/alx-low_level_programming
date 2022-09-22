@@ -8,23 +8,21 @@
 
 int main(void)
 {
-	/**
-	char s1[98] = "Hello ";
-
-	printf("%s\n", s1);
-	printf("%s", s2);
-	p = _strcat(s1, s2);
-	printf("%s", s1);
-	printf("%s", s2);
-	printf("%s", p);
-	return (0);
-*/
-	char s[] = "Expect the best. Prepare for the worst."
-		"Capitalize on what comes.\n";
 	char *p;
-
-	p = leet(s);
+	char s[] = "ROT13 (\"rotate by 13 places\", sometimes hyphenated\n";
+	p = rot13(s);
 	printf("%s", p);
+	printf("-------------------------\n");
+	printf("%s", s);
+	printf("-------------------------\n");
+	p = rot13(s);
 	printf("%s", p);
+	printf("-------------------------\n");
+	printf("%s", s);
+	printf("--------------------------\n");
+	p = rot13(s);
+	printf("%s", p);
+	printf("---------------------------\n");
+       	printf("%s", p);
 	return (0);
 }
