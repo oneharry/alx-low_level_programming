@@ -1,25 +1,19 @@
 #include <stdio.h>
 /**
- * leet - encodes string into 1337
- * @str: string argument
+ * print_number - print numbers only
+ * @n: integer
  * Return: pointer to the encoded string
  */
-char *leet(char *str)
+void print_number(int n)
 {
-	int x = 0;
-	int y = 0;
-	char letters[8] = {'O', 'L', '*', 'E', 'A', '(', '{', 'T'};
-
-	while (str[x])
+	if (n < 0)
 	{
-		for (y = 0; y <= 7; y++)
-		{
-			if ((str[x] == letters[y]) ||
-			    (str[x] - 32 == letters[y]))
-				str[x] = y + '0';
-
-		}
-		x++;
+		_putchar('-');
+		n *= -1;
 	}
-	return (str);
+	if (n == 0)
+		_putchar('0');
+	if(n/10)
+		print_number(n/10);
+	_putchar(n % 10 + '0');
 }

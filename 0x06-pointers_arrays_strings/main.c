@@ -8,21 +8,10 @@
 
 int main(void)
 {
-	char *p;
-	char s[] = "ROT13 (\"rotate by 13 places\", sometimes hyphenated\n";
-	p = rot13(s);
-	printf("%s", p);
-	printf("-------------------------\n");
-	printf("%s", s);
-	printf("-------------------------\n");
-	p = rot13(s);
-	printf("%s", p);
-	printf("-------------------------\n");
-	printf("%s", s);
-	printf("--------------------------\n");
-	p = rot13(s);
-	printf("%s", p);
-	printf("---------------------------\n");
-       	printf("%s", p);
+ 	print_number(98);
+	print_number(402);
+	print_number(1024);
+	print_number(0);
+	print_number(-98);
 	return (0);
 }
