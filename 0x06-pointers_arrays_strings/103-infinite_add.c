@@ -1,25 +1,38 @@
 #include <stdio.h>
+#include <string.h>
 /**
  * leet - encodes string into 1337
  * @str: string argument
  * Return: pointer to the encoded string
  */
-char *leet(char *str)
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int x = 0;
-	int y = 0;
-	char letters[8] = {'O', 'L', '*', 'E', 'A', '(', '{', 'T'};
-
-	while (str[x])
+	char sum;
+	char hold = '0';
+	int x, y;
+	int len = 0;
+	if (strlen(n1) > strlen(n2))
+		len = strlen(n1);
+	else
+		len = strlen(n2);
+	for (x = len;  n2[x] || n1[x]; x--)
 	{
-		for (y = 0; y <= 7; y++)
+		if (n2[x] + n1[x] > 9)
 		{
-			if ((str[x] == letters[y]) ||
-			    (str[x] - 32 == letters[y]))
-				str[x] = y + '0';
-
+			sum = ((n2[x] + n1[x] + hold) % 10);
+			hold = ((n2[x] + n1[x] + hold) / 10);
+		} else
+		{
+			sum = n2[x] + n1[x] + hold;
 		}
-		x++;
+		for (y = size_r; y >= 0; y--)
+		{
+			if ((--y) >= 0)
+				r[y] = sum;
+			
+			else
+				return (0);
+		}
 	}
-	return (str);
+	return (r);
 }
