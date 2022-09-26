@@ -13,9 +13,9 @@ char *_strstr(char *haystack, char *needle)
 		return (haystack);
 	for (x = 0; *(haystack + x); x++)
 	{
-		if (*needle != *(haystack + x))
+		if (*(needle + x) == *(haystack + x))
 			continue;
-		if (!(needle))
+		if ((needle))
 			return (haystack);
 		if (*needle++ != *(haystack + x))
 			break;
