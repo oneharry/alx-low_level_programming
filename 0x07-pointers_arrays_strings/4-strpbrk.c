@@ -8,6 +8,7 @@
 char *_strpbrk(char *s, char *accept)
 {
 	int y;
+
 	for (; *s; s++)
 	{
 		for (y = 0; *accept; y++, accept++)
