@@ -14,9 +14,12 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		for (y = 0; *accept; y++, accept++)
 		{
-			if (*(accept + y) != *(s + x))
+			if (*(accept + y) == *(s + x))
+			{
+				i++;
 				break;
-			i++;
+			} else if 
+		
 		}
 	}
 	return (i);
