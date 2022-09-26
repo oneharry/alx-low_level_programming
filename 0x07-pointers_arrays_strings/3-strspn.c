@@ -10,11 +10,11 @@ unsigned int _strspn(char *s, char *accept)
 	int i = 0;
 	int x, y;
 
-	for (x = 0; *s; x++, s++)
+	for ( ; *s;)
 	{
 		for (y = 0; *(accept + y); y++)
 		{
-			if (*(accept + y) == *(s + x))
+			if (*(accept + y) == *s)
 			{
 				i++;
 				break;
@@ -23,6 +23,7 @@ unsigned int _strspn(char *s, char *accept)
 				return (i);
 			}
 		}
+		s++;
 	}
 	return (i);
 }
