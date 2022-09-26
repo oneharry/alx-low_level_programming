@@ -18,8 +18,7 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				i++;
 				break;
-			} else if 
-		
+			}
 		}
 	}
 	return (i);
