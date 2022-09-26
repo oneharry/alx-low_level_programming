@@ -7,9 +7,9 @@
 */
 char *_strchr(char *s, char c)
 {
-	char *first_c;
+	int x;
 
-	for (int x = 0; *s; x++, s++)
+	for (x = 0; *s; x++, s++)
 	{
 		if (*(s + x) == c)
 			return (s);
