@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 /**
  * leet - encodes string into 1337
  * @str: string argument
@@ -7,32 +6,44 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	char sum;
-	char hold = '0';
-	int x, y;
-	int len = 0;
-	if (strlen(n1) > strlen(n2))
-		len = strlen(n1);
-	else
-		len = strlen(n2);
-	for (x = len;  n2[x] || n1[x]; x--)
+	int sum;
+	int hold;
+
+	while (*n1 && *n2)
 	{
-		if (n2[x] + n1[x] > 9)
-		{
-			sum = ((n2[x] + n1[x] + hold) % 10);
-			hold = ((n2[x] + n1[x] + hold) / 10);
-		} else
-		{
-			sum = n2[x] + n1[x] + hold;
-		}
-		for (y = size_r; y >= 0; y--)
-		{
-			if ((--y) >= 0)
-				r[y] = sum;
-			
-			else
-				return (0);
-		}
+		sum = (*n1 - '0') + (*n2 - '0') + hold;
+		hold = sum / 10;
+		*(r + size_r) = (sum % 10) + '0';
+		n1--;
+		n2--;
+		size_r--;
 	}
-	return (r);
+	while (*n1)
+	{
+		sum = (*n1 - '0');
+		*(r + size_r) = (sum % 10) + '0';
+		n1--;
+		size_r--;
+	}
+	while (*n2)	
+	
+	{
+		sum = (*n2 - '0');
+		*(r + size_r) = (sum % 10) + '0';
+		n2--;
+		size_r--;
+	}
+	if (hold && size_r >= 0)
+	{
+		*(r + size_r) = (hold % 10) + '0';
+		return (r + size_r);
+	}
+	else if (hold && size_r < 0)
+	{
+		return (0);
+	} else 
+	{
+		return (r + size_r + 1);
+	}
+		return (r);
 }
