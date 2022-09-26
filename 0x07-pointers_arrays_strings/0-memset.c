@@ -9,10 +9,11 @@
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int x;
+	unsigned char *str = s, buf = b;
 
 	for (x = 0; x < n; x++)
 	{
-		s[x] = b;
+		str[x] = buf;
 	}
 	_putchar('\n');
 	return (s);
