@@ -16,7 +16,7 @@ int _is_sqrt(int x, int y)
 		return (y);
 	if (y == (x / 2))
 		return (-1);
-	return (_is_sqrt(x, y + 1);
+	return (_is_sqrt(x, y + 1));
 }
 
 int _sqrt_recursion(int n)
@@ -27,5 +27,5 @@ int _sqrt_recursion(int n)
 		return (-1);
 	if (n == 1)
 		return (1);
-	return(_is_sqrt(n, z);
+	return(_is_sqrt(n, z));
 }

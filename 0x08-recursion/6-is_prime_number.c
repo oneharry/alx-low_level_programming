@@ -10,13 +10,13 @@
   * @y: int arg 2
   * Return: number thats a square root
   */
-int _is_divide										(int x, int y)
+int _is_divide(int x, int y)
 {
 	if ((x % y) == 0)
 		return (0);
 	if (y == (x / 2))
 		return (1);
-	return (_is_divide(x, y + 1);
+	return (_is_divide(x, y + 1));
 }
 
 int _sqrt_recursion(int n)
@@ -25,5 +25,5 @@ int _sqrt_recursion(int n)
 		return (0);
 	if (n > 1 && n < 4)
 		return (1);
-	return(_is_divide(n, 2);
+	return (_is_divide(n, 2));
 }
