@@ -1,14 +1,9 @@
 #include "main.h"
 /**
-  * _sqrt_recursion - gets the square root of a number
-  * @n: - argument n
-  * Return: returns 0 or 1 if the integer is a prime number
-  */
-/**
-  * _is_sqrt - checks if a number is a prime
+  * _is_divide - checks if a number is a prime
   * @x: inter arg 1
   * @y: int arg 2
-  * Return: number thats a square root
+  * Return: prime number of int
   */
 int _is_divide(int x, int y)
 {
@@ -18,8 +13,12 @@ int _is_divide(int x, int y)
 		return (1);
 	return (_is_divide(x, y + 1));
 }
-
-int _sqrt_recursion(int n)
+/**
+  * is_prime_number - checks for prime number of an int
+  * @n: Integer argument
+  * Return: inter prime number
+  */
+int is_prime_number(int n)
 {
 	if (n <= 1)
 		return (0);

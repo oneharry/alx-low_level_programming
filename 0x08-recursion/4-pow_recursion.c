@@ -2,7 +2,7 @@
 /**
   * _pow_recursion - print a string using recursion
   * @x: - integer argument to be raised
-  * @y: second argument, power 
+  * @y: second argument, power
   * Return: value of the x raised to y
   */
 int _pow_recursion(int x, int y)
