@@ -1,7 +1,7 @@
 #include "main.h"
 /**
-  * __puts_recursion - print these string using recursion
-  * @s - pointer to the stri ng
+  *_puts_recursion - print these string using recursion
+  * @s: - pointer to the stri ng
   * Return: void
   */
 void _puts_recursion(char *s)
