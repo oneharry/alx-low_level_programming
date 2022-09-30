@@ -8,6 +8,7 @@
 void nargs(int argc, char *argv[])
 {
 	int num = 0;
+
 	while (*argv && argc > 1)
 	{
 		num = num + 1;
@@ -15,6 +16,12 @@ void nargs(int argc, char *argv[])
 	}
 	printf("%d\n", (argc - 1));
 }
+/**
+  * main - entry point
+  * @argc: argument count
+  * @argv: argument string
+  * Return: 0 success
+  */
 int main(int argc, char *argv[])
 {
 	nargs(argc, argv);
