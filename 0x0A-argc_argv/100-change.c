@@ -16,7 +16,7 @@ int change(int argc, char *argv[])
 		return (1);
 	}
 
-	while (x > 0)
+	while (cents > 0)
 	{
 		coins++;
 		if ((cents - 25) >= 0)
@@ -53,6 +53,6 @@ int change(int argc, char *argv[])
   */
 int main(int argc, char *argv[])
 {
-	add(argc, argv);
+	change(argc, argv);
 	return (0);
 }

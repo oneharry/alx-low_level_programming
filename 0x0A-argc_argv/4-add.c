@@ -20,7 +20,7 @@ int add(int argc, char *argv[])
 		num = argv[x][y];
 		for (y = 0; argv[x][y]; y++)
 		{
-			(num >= 0 || num < 0)
+			if (num > '9' || num < '0')
 			{
 				printf("Error\n");
 				return (1);
