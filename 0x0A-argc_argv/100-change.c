@@ -7,7 +7,7 @@
   */
 int change(int argc, char *argv[])
 {
-	int cents = atoi(argv[1]);
+	int cents; 
 	int coins = 0;
 
 	if (argc != 2)
@@ -15,7 +15,7 @@ int change(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-
+	cents = atoi(argv[1]);
 	while (cents > 0)
 	{
 		coins++;

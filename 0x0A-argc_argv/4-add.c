@@ -15,18 +15,18 @@ int add(int argc, char *argv[])
 		printf("0");
 	}
 
-	for (x = 0; x < argc; x++)
+	for (x = 1; x < argc; x++)
 	{
 		num = argv[x][y];
-		for (y = 0; argv[x][y]; y++)
+		for (y = 0; num; y++)
 		{
 			if (num > '9' || num < '0')
 			{
 				printf("Error\n");
 				return (1);
 			}
-			sum = sum + atoi(argv[x]);
 		}
+		sum += atoi(argv[x]);
 	}
 	printf("%d", sum);
 	return (0);
