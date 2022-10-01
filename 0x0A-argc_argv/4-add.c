@@ -7,28 +7,29 @@
   */
 int add(int argc, char *argv[])
 {
-	int x, num, y;
+	int x, y, num = 0;
 	int sum = 0;
 
 	if (argc == 1)
 	{
-		printf("0");
-	}
-
-	for (x = 1; x < argc; x++)
+		printf("%d\n", sum);
+	} else
 	{
-		num = argv[x][y];
-		for (y = 0; num; y++)
+		for (x = 1; x < argc; x++)
 		{
-			if (num > '9' || num < '0')
+			for (y = 0; argv[x][y]; y++)
 			{
-				printf("Error\n");
-				return (1);
+				if (argv[x][y] < '0' || argv[x][y] > '9')
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
+			num = atoi(argv[x]);
+			sum += num;
 		}
-		sum += atoi(argv[x]);
+		printf("%d\n", sum);
 	}
-	printf("%d", sum);
 	return (0);
 
 }
