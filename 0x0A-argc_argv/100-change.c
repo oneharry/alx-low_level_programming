@@ -7,7 +7,7 @@
   */
 int change(int argc, char *argv[])
 {
-	int cents; 
+	int cents;
 	int coins = 0;
 
 	if (argc != 2)
