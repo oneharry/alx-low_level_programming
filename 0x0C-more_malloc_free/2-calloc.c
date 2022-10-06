@@ -6,7 +6,7 @@
   * @size: sizes in bytes of element
   * Return: pointer to allocated arr mem space
   */
-void _calloc(unsigned int nmemb, unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *aloc;
 	char *arr;
