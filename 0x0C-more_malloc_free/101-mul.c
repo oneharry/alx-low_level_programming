@@ -8,7 +8,5 @@
   */
 int main(argc, argv)
 {
-	int num1, num2, mul;
-
 	return (0);
 }
