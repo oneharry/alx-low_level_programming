@@ -1,28 +1,94 @@
 #include "variadic_functions.h"
 
 /**
-  * print_strings - prints strings
-  * @n: number of arguments
-  * @separator: pointer to the separator
+  * print_char - print charac
+  * @arg: argument
   * Return: void
   */
-void print_strings(const char *separator, const unsigned int n, ...)
+void print_char(va_list arg)
 {
-	unsigned int x = 0;
-	va_list np;
-	const char *c;
+	char c;
 
-	va_start(np, n);
-	for (x = 0; x < n; x++)
+	c = va_arg(arg, int);
+	printf("%c", c);
+}
+/**
+   * print_int - print integer
+   * @arg: argument
+   * Return: void
+   */
+void print_int(va_list arg)
+{
+	int i;
+
+	i = va_arg(arg, int);
+	printf("%d", i);
+}
+/**
+   * print_float - print float
+   * @arg: argument
+   * Return: void
+   */
+void print_float(va_list arg)
+{
+	float f;
+
+	f = va_arg(arg, double);
+	printf("%f", f);
+}
+/**
+  * print_string - print string
+  * @arg: argument
+  * Return: void
+  */
+void print_string(va_list arg)
+{
+	char *s;
+
+	s = va_arg(arg, char *);
+	if (s == NULL)
 	{
-		c = va_arg(np, char*);
-		if (c == NULL)
-			printf("(nil)");
-		else
-			printf("%s", c);
-		if (separator != NULL && x != n - 1)
-			printf("%s", separator);
+		printf("(nil)");
+		return;
 	}
+	printf("%s", s);
+}
+
+ /**
+   * print_all - prints every type of argument following
+  * @format: list of all type of format to be printed
+  * @...: varying number of arguments
+  * Return: void
+  *
+  */
+void print_all(const char *format, ...)
+{
+	print_func all_funcs[] = {
+		{"c", print_char},
+		{"i", print_int},
+		{"f", print_float},
+		{"s", print_string}
+	};
+	va_list np;
+	int x = 0;
+	char *separator = "";
+
+	va_start(np, format);
+
+	while (format && (*format))
+	{
+		x = 0;
+		while (x < 4 && (*format != *(all_funcs[x].fmt)))
+			x++;
+		if (x < 4)
+		{
+			printf("%s", separator);
+			all_funcs[x].print(np);
+			separator = ", ";
+		}
+		format++;
+	}
+
 	printf("\n");
 	va_end(np);
 }
