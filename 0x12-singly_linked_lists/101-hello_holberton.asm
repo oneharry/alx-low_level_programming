@@ -1,17 +1,21 @@
-global _start
-section .text
+extern printf
+section .text	;CODE SECTION
+	global main
+main:
+	push	rbp	;set up stack fram
 
-_start:
-	mov	rax, 1		;system call for write
-	mov	rdi, 1		;file handle standard output
-	mov	rsi, msg	;address of message to print
-	mov	rdx, 17		;length of bytes
-	syscall			;call to operating to write to stdout
-	mov	rax, 60		;system exit call
-	xor	rdi, rdi	;exit code 0
-	syscall			;call OS to exit
+	mov	rdi, fmt
+	mov	rsi, msg
+	mov	rax, 0
+	call	printf	;call to printf function
 
-section .data
+	pop	rbp	;restore stack
 
-	msg: db	"Hello, Holberton", 10	; end with new line
+	mov	rax, 0	;normal, no error, return value
+	ret
+
+section .data	;DATA SECTION
+
+	msg:	db "Hello, Holberton", 0
+	fmt:	db "%s", 10, 0
 
