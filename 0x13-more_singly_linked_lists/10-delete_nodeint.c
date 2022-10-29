@@ -3,7 +3,7 @@
 /**
   * delete_nodeint_at_index - delete the node at index
   * @head: pointer to the head node
-  * @idx: index of node to be deleted
+  * @index: index of node to be deleted
   * Return: 1 if delete success
   */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
@@ -14,20 +14,23 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	if (t_head == NULL)
 		return (-1);
-	while (t_head)
+	if (index == 0)
 	{
-		if ((i + 1) != index)
+		temp = t_head;
+		*head = t_head->next;
+		free(temp);
+		return (1);
+	}
+	else
+	{
+		while (i++ < index - 1)
 		{
 			t_head = t_head->next;
 		}
-		else
-		{
-			temp = t_head;
-			t_head = t_head->next;
-			free(temp);
-			return (1);
-		}
-		i++;
+		temp = t_head->next;
+		t_head->next = t_head->next->next;
+		free(temp);
+		return (1);
 	}
 	return (-1);
 }
