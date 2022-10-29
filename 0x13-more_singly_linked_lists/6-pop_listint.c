@@ -15,6 +15,6 @@ int pop_listint(listint_t **head)
 
 	temp = t_head;
 	t_head = t_head->next;
-	free(temp);
-	return (t_head->n);
+	free(*head);
+	return (temp->n);
 }
