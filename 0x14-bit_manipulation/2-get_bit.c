@@ -8,7 +8,15 @@
   */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	if (n >= ULONG_MAX)
+	unsigned int i, len = 0;
+	unsigned long int temp = n;
+
+	for (i = 0; temp != 0; ++i)
+	{
+		len++;
+		temp >>= 1;
+	}
+	if (index > len)
 		return (-1);
 	return ((n >> index) & 1);
 }
