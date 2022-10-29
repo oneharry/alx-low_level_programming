@@ -7,9 +7,16 @@
   */
 void print_binary(unsigned long int n)
 {
-	 int temp = n;
+	int temp = n;
 
-	if (temp != 0)
+	if (temp >> 1 <= 0)
+	{
+		if (temp & 1)
+			_putchar('1');
+		else
+			_putchar('0');
+	}
+	if (temp >> 1 > 0)
 	{
 		print_binary(temp >> 1);
 		if (temp & 1)
@@ -17,6 +24,4 @@ void print_binary(unsigned long int n)
 		else
 			_putchar('0');
 	}
-	else
-		return;
 }
