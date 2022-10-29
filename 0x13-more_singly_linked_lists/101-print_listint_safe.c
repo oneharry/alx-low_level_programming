@@ -7,12 +7,16 @@
   */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *temp = head;
-	size_t num = 0;
 
-	if (temp == NULL)
+
+
+	if (head == NULL)
 		return (0);
-	while (temp)
-		num = 1 + print_listint_safe(temp->next);
-	return (num);
+	while (head)
+	{
+		printf("[%d] %d", head->n, head->n);
+		
+		head = head->next;
+	}
+	return (0);
 }
