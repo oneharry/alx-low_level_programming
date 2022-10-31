@@ -53,14 +53,13 @@ void print_string(va_list arg)
 	}
 	printf("%s", s);
 }
-
  /**
-   * print_all - prints every type of argument following
-  * @format: list of all type of format to be printed
-  * @...: varying number of arguments
-  * Return: void
-  *
-  */
+   * print_all - prints every thing
+   * @format: list of all type of format
+   * @...: varying number of arguments
+   * Return: void
+   *
+   */
 void print_all(const char *format, ...)
 {
 	print_func all_funcs[] = {
