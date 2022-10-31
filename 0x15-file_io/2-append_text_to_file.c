@@ -6,34 +6,18 @@
   * @text_content: pointer to the content of the new file
   * Return: 1 on success, -1 on failure
   */
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd, w, len = 0;
+	int w, fd, len = 0;
+	char *txt = text_content;
 
-	while (*text_content)
-	{
-		len++;
-		text_content++;
-	}
-
-	if (filename == NULL)
-		return (-1);
-	fd = open(filename, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
+	while (txt[len++])
+		;
+	fd = open(filename, O_CREAT | O_RDWR | O_APPEND, 0);
 	if (fd == -1)
 		return (-1);
 	w = write(fd, text_content, len);
-	if (w == -1 || (len != w))
+	if (w == -1 || w != len)
 		return (-1);
 	return (1);
-}
-/**
-  * file_exist - checks if a file already exists
-  * @filename: filename to be checked
-  * Return: 1 for true
-  */
-int file_exist(const char *filename)
-{
-	struct stat buffer;
-
-	return (stat(filename, &buffer));
 }
