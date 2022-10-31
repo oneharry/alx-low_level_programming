@@ -22,19 +22,8 @@ int create_file(const char *filename, char *text_content)
 	fd = open(filename, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
 	if (fd == -1)
 		return (-1);
-	w = write(fd, text_content, len);
-	if (w == -1 || (len != w))
+	w = write(fd, text_content, len + 1);
+	if (w == -1 || (len + 1 != w))
 		return (-1);
 	return (1);
-}
-/**
-  * file_exist - checks if a file already exists
-  * @filename: filename to be checked
-  * Return: 1 for true
-  */
-int file_exist(const char *filename)
-{
-	struct stat buffer;
-
-	return (stat(filename, &buffer));
 }
