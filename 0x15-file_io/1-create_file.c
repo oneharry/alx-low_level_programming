@@ -22,8 +22,8 @@ int create_file(const char *filename, char *text_content)
 	fd = open(filename, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
 	if (fd == -1)
 		return (-1);
-	w = write(fd, text_content, len + 1);
-	if (w == -1 || (len + 1 != w))
+	w = write(fd, text_content, len);
+	if (w == -1 || (len != w))
 		return (-1);
 	return (1);
 }
