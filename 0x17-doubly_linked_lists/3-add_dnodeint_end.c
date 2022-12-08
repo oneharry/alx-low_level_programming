@@ -19,15 +19,9 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	{
 		new->prev = NULL;
 		*head = new;
-		return (*head);
-	}
-	if ((*head)->next == NULL)
-	{
-		(*head)->next = new;
-		new->prev = *head;
 		return (new);
 	}
-	while (thead != NULL && thead->next != NULL)
+	while (thead->next != NULL)
 		thead = thead->next;
 	thead->next = new;
 	new->prev = thead;
