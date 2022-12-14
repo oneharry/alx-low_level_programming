@@ -1,9 +1,0 @@
-#include <stdio.h>
-/**
- *main function is the entry point
- * Description: This program returns 0, showing that it ran succesfully
-*/
-int main(void)
-{
-	return (0);
-}
