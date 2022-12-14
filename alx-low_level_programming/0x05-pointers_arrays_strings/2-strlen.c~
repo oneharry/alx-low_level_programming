@@ -1,0 +1,20 @@
+#include "main.h"
+#include <stdio.h>
+/**
+ * swa[_int - swaps the vslues of the 2 argument
+ * @a: takes a pointer as an argument
+ * @b: second argument
+ * Return: void
+ */
+
+int _strlen(char *s)
+{
+	int counter = 0;
+
+	while (*s != '\0')
+	{
+		*s++;
+		counter++;
+	}
+	return (counter);
+}
