@@ -9,11 +9,12 @@ void print_node(hash_node_t *head);
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int size, i, j = 0;
+	hash_node_t *node;
 
 	size = ht->size;
 	if (ht == NULL)
 	{
-		printf("{}\n");
+		return;
 	}
 	else
 	{
@@ -24,7 +25,8 @@ void hash_table_print(const hash_table_t *ht)
 				continue;
 			if (j > 0)
 				printf(", ");
-			print_node(ht->array[i]);
+			node = ht->array[i];
+			print_node(node);
 			j++;
 		}
 		printf("}\n");
@@ -42,5 +44,7 @@ void print_node(hash_node_t *head)
 	{
 		printf("'%s': '%s'", head->key, head->value);
 		head = head->next;
+		if (head)
+			printf(", ");
 	}
 }
