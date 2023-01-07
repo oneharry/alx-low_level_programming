@@ -3,7 +3,7 @@
 hash_node_t *create_node(const char *key, const char *value);
 void handle_collision(hash_table_t *ht,
 		unsigned long int index, hash_node_t *node);
-int add_node_end(hash_node_t *head, hash_node_t *node);
+hash_node_t *add_node_beg(hash_node_t *head, hash_node_t *node);
 
 /**
   * hash_table_set - adds an element to the hash table
@@ -15,9 +15,11 @@ int add_node_end(hash_node_t *head, hash_node_t *node);
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int size, index;
-	hash_node_t *new_node, *node;
+	hash_node_t *new_node, *node, *temp;
 	const unsigned char *new_key = (const unsigned char *) key;
 
+	if (ht == NULL || key == NULL)
+		return (0);
 	size = ht->size;
 	new_node = create_node(key, value);
 	index = key_index(new_key, size);
@@ -25,17 +27,24 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (node == NULL)
 	{
-		ht->array[index] = new_node;
+		ht->array[index] = add_node_beg(node, new_node);
 	}
 	else
 	{
-		if (strcmp(node->key, key) == 0)
+		temp = node;
+		while (temp)
 		{
-			strcpy(ht->array[index]->value, value);
+			if (strcmp(temp->key, key) == 0)
+			{
+				strcpy(ht->array[index]->value, strdup(value));
+				return (1);
+			}
+			temp = temp->next;
 		}
+
+		ht->array[index] = add_node_beg(node, new_node);
 	}
 	return (1);
-
 }
 
 /**
@@ -48,44 +57,42 @@ hash_node_t *create_node(const char *key, const char *value)
 {
 	hash_node_t *node = (hash_node_t *) malloc(sizeof(hash_node_t));
 
+	if (node == NULL)
+		return (NULL);
 	node->key = (char *) malloc(strlen(key) + 1);
 	node->value = (char *) malloc(strlen(value) + 1);
+	if (node->key == NULL)
+	{
+		free(node);
+		return (NULL);
+	}
+	if (node->value == NULL)
+	{
+		free(node);
+		free(node->key);
+		return (NULL);
+	}
 
 	strcpy(node->key, key);
-	strcpy(node->value, value);
+	strcpy(node->value, strdup(value));
 	node->next = NULL;
-
 	return (node);
 }
 
 /**
-  * handle_collision - handle collision of index in a hashtable
-  * @ht: pointer to the table
-  * @index: index of the node in the array
-  * @node: node
-  * Return: void
-  */
-void handle_collision(hash_table_t *ht,
-		unsigned long int index, hash_node_t *node)
-{
-	 hash_node_t *temp;
-
-	 temp = ht->array[index];
-	 add_node_end(node, temp);
-}
-
-/**
-  * add_node_end - add node at end of the linked list
+  * add_node_beg - add node at end of the linked list
   * @head: head node
   * @node: node to be added to the list
-  * Return: 0 for success
+  * Return: pointer to the head of list
   */
-int add_node_end(hash_node_t *head, hash_node_t *node)
+hash_node_t *add_node_beg(hash_node_t *head, hash_node_t *node)
 {
-	hash_node_t *temp = head;
-
-	while (temp->next)
-		temp = temp->next;
-	temp->next = node;
-	return (0);
+	if (head == NULL)
+	{
+		head = node;
+		return (head);
+	}
+	node->next = head;
+	head = node;
+	return (head);
 }
