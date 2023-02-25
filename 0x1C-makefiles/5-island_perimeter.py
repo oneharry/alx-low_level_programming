@@ -9,8 +9,8 @@ def island_perimeter(grid):
     """
     h = len(grid)
     w = len(grid[0])
-    end = 0;
-    size = 0;
+    end = 0
+    size = 0
 
     for x in range(h):
         for y in range(w):
