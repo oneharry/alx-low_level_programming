@@ -40,6 +40,7 @@ int bin_search(int *array, int l, int r, int value)
 
 	while (r > l)
 	{
+		print_array(array, l, r + 1);
 		mid = (l + r) / 2;
 		if (array[mid] == value)
 			return (mid);
@@ -48,7 +49,6 @@ int bin_search(int *array, int l, int r, int value)
 			l = mid + 1;
 		else
 			r = mid - 1;
-		print_array(array, l, r + 1);
 	}
 	return (-1);
 }
